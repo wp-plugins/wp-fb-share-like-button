@@ -1,6 +1,6 @@
-=== Like ===
+=== WP Facebook Like Button ===
 Contributors: vivacityinfotech.jaipur
-Donate link: http://vivacityinfotech.net/paypal-donation/
+Donate link: http://tinyurl.com/owxtkmt
 Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
 Requires at least:3.8.1
 Tested up to:3.8.1
@@ -38,8 +38,7 @@ You cab also customize setting for following features:
 
 
 
-Visit the <a
-href="http://www.vivacityinfotech.com">Wp facebook Like Button Plugin Homepage</a> for more information.
+Visit our <a href="http://vivacityinfotech.net/wp-facebook-like-button-by-vivacity/">demo page</a> for more information.
 
 
 == Frequently Asked Questions ==
@@ -72,6 +71,6 @@ PHP 5+ is supported.
 = 1.0 =
 * Stable version.
 
-Visit the <a
-href="http://www.vivacityinfotech.com">Wp facebook Like Button Plugin Homepage</a> for more information.
+Visit our <a
+href="http://vivacityinfotech.net/wp-facebook-like-button-by-vivacity/">demo page</a> for more information.
 
