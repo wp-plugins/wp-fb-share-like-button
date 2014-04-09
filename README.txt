@@ -4,7 +4,7 @@ Donate link: http://tinyurl.com/owxtkmt
 Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
 Requires at least:3.8.1
 Tested up to:3.8.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 
 == Description ==
@@ -61,10 +61,6 @@ Visit our <a href="http://vivacityinfotech.net/wp-facebook-like-button-by-vivaci
 3. WP Facebook Like Button Position Settings Section.
 4. Displaying WP Facebook Like Button ater your post.
 
-
-== PHP Version ==
-
-PHP 5+ is supported.
 
 
 == Changelog ==

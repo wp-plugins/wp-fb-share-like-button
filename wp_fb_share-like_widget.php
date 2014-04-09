@@ -3,7 +3,7 @@
 * Plugin Name: Wp Facebook Share Like Button
 * Plugin URI: http://www.vivacityinfotech.com
 * Description: A simple Facebook Like Button plugin for your posts/archive/pages or Home page.
-* Version: 1.0
+* Version: 1.1
 *
 * Author: Vivacity Infotech Pvt. Ltd.
 * Author URI: http://www.vivacityinfotech.com
