@@ -56,7 +56,10 @@ After saving your settings you should refresh your web page where the Facebook B
 == Screenshots ==
 Visit our <a href="http://vivacityinfotech.net/wp-facebook-like-button-by-vivacity/">demo page</a> for more information.
 
-
+1. WP Facebook Like Button plugin installed and appears in the plugins menu.
+2. WP Facebook Like Button Appearance Settings Section.
+3. WP Facebook Like Button Position Settings Section.
+4. Displaying WP Facebook Like Button ater your post.
 
 
 == PHP Version ==

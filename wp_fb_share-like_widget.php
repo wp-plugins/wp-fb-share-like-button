@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Wp Facebook Share Like Button
 * Plugin URI: http://www.vivacityinfotech.com
-* Description: A simple Facebook Like Button plugin for your posts/category/pages or Home page.
+* Description: A simple Facebook Like Button plugin for your posts/archive/pages or Home page.
 * Version: 1.0
 *
 * Author: Vivacity Infotech Pvt. Ltd.
@@ -87,17 +87,17 @@ function viva_like_init()
     add_option('viva_like_align', 'left');
     add_option('viva_like_showfaces', 'false');
     add_option('viva_like_show_at_top', 'true');
-    add_option('viva_like_show_at_bottom', 'true');
+    add_option('viva_like_show_at_bottom', 'false');
     add_option('viva_like_show_on_page', 'true');
     add_option('viva_like_show_on_post', 'true');
     add_option('viva_like_show_on_home', 'true');
     add_option('viva_like_show_on_archive', 'false');
     add_option('viva_like_facebook_image', '');
-    add_option('viva_like_xfbml', 'false');
+    add_option('viva_like_xfbml', 'true');
     add_option('viva_like_xfbml_async', 'false');
     add_option('viva_like_facebook_app_id',  $viva_like_settings['default_app_id']);
     add_option('viva_like_use_excerpt_as_description', 'true');
-    add_option('viva_like_type', 'Article');
+    add_option('viva_like_type', 'Article'); 
 
     $viva_like_settings['width'] = get_option('viva_like_width');
     $viva_like_settings['height'] = get_option('viva_like_height');
@@ -112,6 +112,7 @@ function viva_like_init()
     $viva_like_settings['showonpage'] = get_option('viva_like_show_on_page') === 'true';
     $viva_like_settings['showonpost'] = get_option('viva_like_show_on_post') === 'true';
     $viva_like_settings['showonhome'] = get_option('viva_like_show_on_home') === 'true';
+     $viva_like_settings['showonarchive'] = get_option('viva_like_show_on_archive') === 'true';
  
    
 
@@ -149,7 +150,6 @@ function viva_like_widget_header_meta()
 
     $fbappid = trim($viva_like_settings['facebook_app_id']);
 
-
     
     if ($fbappid != $viva_like_settings['default_app_id'] && $fbappid!='') {
 	echo '<meta property="fb:app_id" content="'.$fbappid.'" />'."\n";
@@ -160,6 +160,7 @@ function viva_like_widget_header_meta()
 	    echo '<meta property="og:image" content="'.$image.'" />'."\n";
     }
     echo '<meta property="og:site_name" content="'.htmlspecialchars(get_bloginfo('name')).'" />'."\n";
+    
     if(is_single() || is_page()) {
 	$title = the_title('', '', false);
 	$php_version = explode('.', phpversion());
@@ -175,9 +176,9 @@ function viva_like_widget_header_meta()
 		    	echo '<meta property="og:description" content="'.htmlspecialchars($description).'" />'."\n";
 	}
     } else {
-    	echo '<meta property="og:title" content="'.get_bloginfo('name').'" />';
-    	echo '<meta property="og:url" content="'.get_bloginfo('url').'" />';
-    	echo '<meta property="og:description" content="'.get_bloginfo('description').'" />';
+    	//echo '<meta property="og:title" content="'.get_bloginfo('name').'" />';
+    	//echo '<meta property="og:url" content="'.get_bloginfo('url').'" />';
+    	//echo '<meta property="og:description" content="'.get_bloginfo('description').'" />';
     }
 
     foreach($viva_like_settings['og'] as $k => $v) {
@@ -433,16 +434,15 @@ function viva_plugin_options()
             <th scope="row"><?php _e("Image URL:", 'viva_like_trans_domain' ); ?></th>
             <td><input type="text" size="60" name="viva_like_facebook_image" value="<?php echo get_option('viva_like_facebook_image'); ?>" /></td>
         </tr>
-        <tr>
-             <th scope="row"><?php _e("Use XFBML:", 'viva_like_trans_domain' ); ?></th>
-            <td><input type="checkbox" name="viva_like_xfbml" value="true" <?php echo (get_option('viva_like_xfbml') == 'true' ? 'checked' : ''); ?>/></td>
-        </tr>
+       
+            <input type="hidden" name="viva_like_xfbml" value="true" />
+        
         <tr>
             <th scope="row"><?php _e("Load XFBML Asynchronously:", 'viva_like_trans_domain' ); ?></th>
             <td><input type="checkbox" name="viva_like_xfbml_async" value="true" <?php echo (get_option('viva_like_xfbml_async') == 'true' ? 'checked' : ''); ?>/></td>
         </tr>
         <tr valign="top">
-            <th scope="row"><?php _e("Facebook App ID:", 'viva_like_trans_domain' ); ?><br /><small><?php _e("To get an App ID:", 'viva_like_trans_domain' ); ?> <a href="http://developers.facebook.com/setup/" target="_blank"><?php _e("Create an  App", 'viva_like_trans_domain' ); ?></a></small></th>
+            <th scope="row"><?php _e("Facebook App ID (Required):", 'viva_like_trans_domain' ); ?><br /><small><?php _e("To get an App ID:", 'viva_like_trans_domain' ); ?> <a href="http://developers.facebook.com/setup/" target="_blank"><?php _e("Create an  App", 'viva_like_trans_domain' ); ?></a></small></th>
             <td><input type="text" size="35" name="viva_like_facebook_app_id" value="<?php echo get_option('viva_like_facebook_app_id'); ?>" /> <small><?php //_e("Required if using XFBML", 'viva_like_trans_domain' ); ?></small></td>
         </tr>
         
@@ -459,13 +459,14 @@ function viva_plugin_options()
                     $curmenutype = get_option('viva_like_type');
                     foreach ($viva_like_types as $type)
                     {
-			if(strtolower($type)==$type)
+			if(strtolower($type) == $type)
 	                        echo "<option value=\"$type\"". ($type == $curmenutype ? " selected":""). ">$type</option>";
 			else
 	                        echo "<option value=\"\">-- $type --</option>";
                     }
                 ?>
                 </select>
+                </td>
         </tr>
  
     </table>
