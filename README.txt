@@ -1,10 +1,10 @@
 === WP Facebook Like Button ===
 Contributors: vivacityinfotech.jaipur
 Donate link: http://tinyurl.com/owxtkmt
-Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
+Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
 Requires at least:3.8.1
 Tested up to:3.8.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 
 == Description ==
@@ -54,20 +54,16 @@ After saving your settings you should refresh your web page where the Facebook B
 
 
 == Screenshots ==
-Visit our <a href="http://vivacityinfotech.net/wp-facebook-like-button-by-vivacity/">demo page</a> for more information.
 
 1. WP Facebook Like Button plugin installed and appears in the plugins menu.
 2. WP Facebook Like Button Appearance Settings Section.
 3. WP Facebook Like Button Position Settings Section.
-4. Displaying WP Facebook Like Button ater your post.
-
-
-== PHP Version ==
-
-PHP 5+ is supported.
+4. Displaying WP Facebook Like Button after your post.
 
 
 == Changelog ==
+= 1.1 =
+* A bug of content not appearing is resolved.
 
 = 1.0 =
 * Stable version.

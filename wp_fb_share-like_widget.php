@@ -3,13 +3,14 @@
 * Plugin Name: Wp Facebook Share Like Button
 * Plugin URI: http://www.vivacityinfotech.com
 * Description: A simple Facebook Like Button plugin for your posts/archive/pages or Home page.
-* Version: 1.0
+* Version: 1.1
 * Author: Vivacity Infotech Pvt. Ltd.
 * Author URI: http://www.vivacityinfotech.com
 */
 ?>
-<?
-/* 2014  Vivacity InfoTech Pvt. Ltd.  (email : vivacityinfotech.jaipur@gmail.com)
+ <?php
+ /*
+Copyright 2014  Vivacity InfoTech Pvt. Ltd.  (email : vivacityinfotech.jaipur@gmail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -24,9 +25,10 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-
+?>
+<?php
 $viva_like_settings = array();
-$viva_like_settings['default_app_id'] = 'YOUR FACEBOOK APPLICATION ID';
+$viva_like_settings['default_app_id'] = '305476086278632';
 
 $viva_like_layouts = array('standard', 'button_count', 'box_count');
 $viva_like_verbs   = array('like', 'recommend');
@@ -191,9 +193,7 @@ function viva_like_widget_header_meta()
 		    	echo '<meta property="og:description" content="'.htmlspecialchars($description).'" />'."\n";
 	}
     } else {
-    	//echo '<meta property="og:title" content="'.get_bloginfo('name').'" />';
-    	//echo '<meta property="og:url" content="'.get_bloginfo('url').'" />';
-    	//echo '<meta property="og:description" content="'.get_bloginfo('description').'" />';
+    	
     }
 
     foreach($viva_like_settings['og'] as $k => $v) {
