@@ -23,7 +23,9 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 $viva_like_settings = array();
-$viva_like_settings['default_app_id'] = '305476086278632';
+$viva_like_settings['default_app_id'] = '';
+$plugin_appid = '305476086278632'; // Plugin's Facebook app Id
+
 
 $viva_like_layouts = array('standard', 'button_count', 'box_count');
 $viva_like_verbs   = array('like', 'recommend');
@@ -88,6 +90,7 @@ function viva_register_like_settings() {
     register_setting('viva_like', 'viva_like_use_excerpt_as_description');
     register_setting('viva_like', 'viva_like_type');
     register_setting('viva_like', 'viva_like_excludepage');
+    register_setting('viva_like', 'viva_like_use_plugin_appid');
 }
 
 
@@ -125,6 +128,8 @@ function viva_like_init()
     add_option('viva_like_facebook_app_id',  $viva_like_settings['default_app_id']);
     add_option('viva_like_use_excerpt_as_description', 'true');
     add_option('viva_like_type', 'Article');
+    add_option('viva_like_use_plugin_appid', 'true');
+    
   
     add_option('viva_like_excludepage', $pages);
 
@@ -147,6 +152,7 @@ function viva_like_init()
     $viva_like_settings['xfbml'] = get_option('viva_like_xfbml');
     $viva_like_settings['xfbml_async'] = get_option('viva_like_xfbml_async');
     $viva_like_settings['facebook_app_id'] = get_option('viva_like_facebook_app_id');
+    $viva_like_settings['plugin_app_id'] = get_option('viva_like_use_plugin_appid');
 
     $viva_like_settings['use_excerpt_as_description'] = get_option('viva_like_use_excerpt_as_description');
 
@@ -173,9 +179,20 @@ function viva_like_schema($attr) {
 function viva_like_widget_header_meta()
 {
     global $viva_like_settings;
-  
-   
-    $fbappid = trim($viva_like_settings['facebook_app_id']);
+    global $plugin_appid; 
+    
+    if($viva_like_settings['plugin_app_id'] == 'true') {
+       	  $fbappid = $plugin_appid;
+      	}
+    	   else {
+    	 		  $fbappid = trim($viva_like_settings['facebook_app_id']);
+    	   		}
+    
+    if(empty($fbappid)){
+    	
+    	
+    	
+    	}
 
     
     if ($fbappid != $viva_like_settings['default_app_id'] && $fbappid!='') {
@@ -218,12 +235,15 @@ function viva_like_widget_header_meta()
 function viva_like_widget_footer()
 {
     global $viva_like_settings;
-   
-   
-
-
+   global $plugin_appid; 
     if($viva_like_settings['xfbml']=='true') {
-	$appids = trim($viva_like_settings['facebook_app_id']);
+if($viva_like_settings['plugin_app_id'] == 'true') {
+	
+       	  $appids = $plugin_appid;
+      	}
+    	    	else {
+    	 		  $appids = trim($viva_like_settings['facebook_app_id']);
+    	   		}
 	$appids = explode(',', $appids);
 
 	if(!count($appids))
@@ -357,19 +377,28 @@ function viva_plugin_options()
     global $viva_like_aligns;
     global $viva_like_types;
     global $viva_like_excludepage;
+    global $viva_like_settings;
 
 ?>
 <link href="<?php echo plugins_url( 'style.css' , __FILE__ ); ?>" rel="stylesheet" type="text/css">
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script type="text/javascript" src="<?php echo plugins_url( 'script.js' , __FILE__ ); ?>"></script>
  <div class="wrap">
  
   <div class="top">
   <h3>Facebook Like Button <small>by <a href="http://www.vivacityinfotech.com" target="_blank">Vivacity Infotech Pvt. Ltd.</a>
   </h3>
     </div> <!-- ------End of top-----------  -->
+  
+   <?php    
+     if( ($viva_like_settings['facebook_app_id'] == '' ) && ($viva_like_settings['plugin_app_id'] != 'true') ){
+     	?>	
+     	 <div class="error errormsg">Please Insert Your facebook App Id or Use Plugin default App Id.</div>    	
+ <?php   	} ?>
     
 	<div class="inner_wrap">
-	 <div class="left">
+		 <div class="left">
 	 
    <form method="post" action="options.php">
     <?php
@@ -378,8 +407,7 @@ function viva_plugin_options()
         } else {
             settings_fields('viva_like');
         }
-    ?>
-
+ ?>
     <table class="form-table">
        <h3 class="title"><?php _e("Appearance Settings", 'viva_like_trans_domain' ); ?></h3>
   <table class="form-table admintbl">
@@ -498,6 +526,11 @@ function viva_plugin_options()
         </tr>
         
         <tr>
+            <th scope="row"><?php _e("Use plugin's Facebook App Id", 'viva_like_trans_domain' ); ?><br /><small><?php _e("If you want to use facebook app id provided by our plugin please use this checkbox.", 'viva_like_trans_domain' ); ?></small></th>
+            <td><input type="checkbox" name="viva_like_use_plugin_appid" value="true" <?php echo (get_option('viva_like_use_plugin_appid') == 'true' ? 'checked' : ''); ?>/></td>
+        </tr>
+        
+        <tr>
             <th scope="row"><?php _e("Use Excerpt as Description:", 'viva_like_trans_domain' ); ?></th>
             <td><input type="checkbox" name="viva_like_use_excerpt_as_description" value="true" <?php echo (get_option('viva_like_use_excerpt_as_description') == 'true' ? 'checked' : ''); ?>/></td>
         </tr>
@@ -599,6 +632,7 @@ has expertise in :
 </a>
 </li>
 </ul>
+ <h3><strong><a target="_blank" href="http://www.vivacityinfotech.com/contactus.html" >Contact Us Here</a></strong></h3>
   </div> 
 </div>	
 	</center>
@@ -606,7 +640,7 @@ has expertise in :
 </div> <!-- --------End of inner_wrap--------- -->
 		
 		
-  </div> <!-- ---------End of wrap-------- --> 
+</div> <!-- ---------End of wrap-------- --> 
 <?php
 }
 viva_like_init();

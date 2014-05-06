@@ -2,9 +2,9 @@
 Contributors: vivacityinfotech.jaipur
 Donate link: http://tinyurl.com/owxtkmt
 Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
-Requires at least:3.8.1
+Requires at least:3.5
 Tested up to:3.9
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 
 == Description ==
@@ -12,7 +12,7 @@ License: GPLv2 or later
 A Simple Facebook Like Button for your posts/home/pages/archive.
 Your can like and share your content using a simple click on facebook Button.
 
-You cab also customize setting for following features:
+You can also customize setting for following features:
 
 
 * You can hide /show facebook like button on posts/archive/pages/home.
@@ -26,6 +26,7 @@ You cab also customize setting for following features:
 * Iframe and XFBML versions of Facebook Like Button. 
 * Asynchronous or Synchronous loading of the Javascript
 * Hide facebook Like button using "Exclude Page IDs" from any page if "Show on page" checkbox enabled for all pages.
+* Option for use Facebook App Id provided by plugin.
 
 
 = Rate Us / Feedback =
@@ -42,11 +43,17 @@ If you like the plugin please [Donate here](http://tinyurl.com/owxtkmt).
 
 
 1. Download the Wp facebook Like Button Plugin.(Fb-like zip file).
-2. Extract it in the `/wp-content/plugins/` directory
-3. Activate the plugin through the 'Plugins' menu in WordPress
-4. (Optional) Customize the plugin in the Settings > Like-Settings menu
+2. Extract it in the '/wp-content/plugins/' directory.
+3. Activate the plugin through the 'Plugins' menu in WordPress.
+4. Customize the plugin in the Settings > Like-Settings menu.
 
+Your Facebook App Id is required to show facebook Like Button on your site.
+If you don't have any facebook app id and so please click on "<a href="https://developers.facebook.com/apps" target="_blank" >Create New App</a>".
+If you don't have any facebook app id so you can also use plugin's default Facebook App Id. For this, optional checkbox provided into settings page.
 
+You can also remove Facebook like button from some pages , if "show on page " checkbox enabled for pages. For remove Facebook like button please insert page ids separate them with commas,[ like 5, 21] in "Exclude Using Page IDs" field.
+
+After customize plugin settings, please click on "Save Changes".
 
 
 Visit our <a href="http://vivacityinfotech.net/wp-facebook-like-button-by-vivacity/">demo page</a> for more information.
@@ -77,11 +84,18 @@ For this please insert page ids separate them with commas,[ like  5, 21] in "Exc
 
 
 == Changelog ==
+
+= 1.3 =
+* Stable version.
+
+= 1.2 =
+* A new feature is added for hiding like button on pages
+
 = 1.1 =
 * A bug of content not appearing is resolved.
 
-= 1.2 =
-* Stable version.
+= 1.0 =
+* Intial Release of Plugin
 
 Visit our <a
 href="http://vivacityinfotech.net/wp-facebook-like-button-by-vivacity/">demo page</a> for more information.
