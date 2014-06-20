@@ -3,8 +3,8 @@ Contributors: vivacityinfotech.jaipur
 Donate link: http://tinyurl.com/owxtkmt
 Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
 Requires at least:3.5
-Tested up to:3.9
-Stable tag: 1.3
+Tested up to:3.9.1
+Stable tag: 1.4
 License: GPLv2 or later
 
 == Description ==
@@ -84,6 +84,9 @@ For this please insert page ids separate them with commas,[ like  5, 21] in "Exc
 
 
 == Changelog ==
+
+= 1.4 =
+* Added the feature to select from a bunch of different languages.
 
 = 1.3 =
 * Stable version.
