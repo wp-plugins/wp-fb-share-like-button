@@ -3,7 +3,7 @@
 * Plugin Name: Wp Facebook Share Like Button
 * Plugin URI: http://www.vivacityinfotech.com
 * Description: A simple Facebook Like Button plugin for your posts/archive/pages or Home page.
-* Version: 1.3
+* Version: 1.4
 * Author: Vivacity Infotech Pvt. Ltd.
 * Author URI: http://www.vivacityinfotech.com
 */
@@ -91,6 +91,7 @@ function viva_register_like_settings() {
     register_setting('viva_like', 'viva_like_type');
     register_setting('viva_like', 'viva_like_excludepage');
     register_setting('viva_like', 'viva_like_use_plugin_appid');
+     register_setting('viva_like', 'viva_like_use_plugin_lang');
 }
 
 
@@ -129,6 +130,7 @@ function viva_like_init()
     add_option('viva_like_use_excerpt_as_description', 'true');
     add_option('viva_like_type', 'Article');
     add_option('viva_like_use_plugin_appid', 'true');
+     add_option('viva_like_use_plugin_lang', 'English');
     
   
     add_option('viva_like_excludepage', $pages);
@@ -137,6 +139,7 @@ function viva_like_init()
     $viva_like_settings['height'] = get_option('viva_like_height');
     $viva_like_settings['layout'] = get_option('viva_like_layout');
     $viva_like_settings['verb'] = get_option('viva_like_verb');
+     $viva_like_settings['language'] = get_option('viva_like_use_plugin_lang');
 
     $viva_like_settings['colorscheme'] = get_option('viva_like_colorscheme');
     $viva_like_settings['align'] = get_option('viva_like_align');
@@ -236,6 +239,11 @@ function viva_like_widget_footer()
 {
     global $viva_like_settings;
    global $plugin_appid; 
+   if(isset($viva_like_settings['language'])&& $viva_like_settings['language']!='')
+   	$lang1=$viva_like_settings['language'];
+   else
+   	$lang1='en_US';
+  
     if($viva_like_settings['xfbml']=='true') {
 if($viva_like_settings['plugin_app_id'] == 'true') {
 	
@@ -265,7 +273,7 @@ echo <<<END
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_IN/all.js#xfbml=1&appId='.$appid.'";
+  js.src = "//connect.facebook.net/".$lang1."/all.js#xfbml=1&appId='.$appid.'";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -275,7 +283,7 @@ END;
 
 echo <<<END
 <div id="fb-root"></div>
-<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script src="http://connect.facebook.net/$lang1/all.js"></script>
 <script>
   window.fbAsyncInit = function() {
     FB.init({appId: '$appid', status: true, cookie: true, xfbml: true});
@@ -378,6 +386,10 @@ function viva_plugin_options()
     global $viva_like_types;
     global $viva_like_excludepage;
     global $viva_like_settings;
+ 	 global $lang;
+    
+  
+
 
 ?>
 <link href="<?php echo plugins_url( 'style.css' , __FILE__ ); ?>" rel="stylesheet" type="text/css">
@@ -463,6 +475,135 @@ function viva_plugin_options()
             <th scope="row"><?php _e("Show Faces:", 'viva_like_trans_domain' ); ?></th>
             <td><input type="checkbox" name="viva_like_showfaces" value="true" <?php echo (get_option('viva_like_showfaces') == 'true' ? 'checked' : ''); ?>/> <small><?php //_e("Don't forget to increase the Height accordingly", 'viva_like_trans_domain' ); ?></small></td>
         </tr>
+            <tr>
+            <th scope="row"><?php _e("Language:", 'viva_like_trans_domain' ); ?></th>
+            <td>
+            <?php $lang=array();
+								$lang['af_ZA']='Afrikaans';
+								$lang['sq_AL']='Albanian';
+								$lang['ar_AR']='Arabic';
+								$lang['hy_AM']='Armenian';
+								$lang['ay_BO']='Aymara';
+								$lang['az_AZ']='Azeri';
+								$lang['eu_ES']='Basque';
+								$lang['be_BY']='Belarusian';
+								$lang['bn_IN']='Bengali';
+								$lang['bs_BA']='Bosnian';
+								$lang['bg_BG']='Bulgarian';
+								$lang['ca_ES']='Catalan';
+								$lang['ck_US']='Cherokee';
+								$lang['hr_HR']='Croatian';
+								$lang['cs_CZ']='Czech';
+								$lang['da_DK']='Danish';
+								$lang['nl_NL']='Dutch';
+								$lang['nl_BE']='Dutch (Belgi?)';
+								$lang['en_GB']='English (UK)';
+								$lang['en_PI']='English (Pirate)';
+								$lang['en_UD']='English (Upside Down)';
+								$lang['en_US']='English (US)';
+								$lang['eo_EO']='Esperanto';
+								$lang['et_EE']='Estonian';
+								$lang['fo_FO']='Faroese';
+								$lang['tl_PH']='Filipino';
+								$lang['fi_FI']='Finnish';
+								$lang['fb_FI']='Finnish (test)';
+								$lang['fr_CA']='French (Canada)';
+								$lang['fr_FR']='French (France)';
+								$lang['gl_ES']='Galician';
+								$lang['ka_GE']='Georgian';
+								$lang['de_DE']='German';
+								$lang['el_GR']='Greek';
+								$lang['gn_PY']='Guaran?';
+								$lang['gu_IN']='Gujarati';
+								$lang['he_IL']='Hebrew';
+								$lang['hi_IN']='Hindi';
+								$lang['hu_HU']='Hungarian';
+								$lang['is_IS']='Icelandic';
+								$lang['id_ID']='Indonesian';
+								$lang['ga_IE']='Irish';
+								$lang['it_IT']='Italian';
+								$lang['ja_JP']='Japanese';
+								$lang['jv_ID']='Javanese';
+								$lang['kn_IN']='Kannada';
+								$lang['kk_KZ']='Kazakh';
+								$lang['km_KH']='Khmer';
+								$lang['tl_ST']='Klingon';
+								$lang['ko_KR']='Korean';
+								$lang['ku_TR']='Kurdish';
+								$lang['la_VA']='Latin';
+								$lang['lv_LV']='Latvian';
+								$lang['fb_LT']='Leet Speak';
+								$lang['li_NL']='Limburgish';
+								$lang['lt_LT']='Lithuanian';
+								$lang['mk_MK']='Macedonian';
+								$lang['mg_MG']='Malagasy';
+								$lang['ms_MY']='Malay';
+								$lang['ml_IN']='Malayalam';
+								$lang['mt_MT']='Maltese';
+								$lang['mr_IN']='Marathi';
+								$lang['mn_MN']='Mongolian';
+								$lang['ne_NP']='Nepali';
+								$lang['se_NO']='Northern S?mi';
+								$lang['nb_NO']='Norwegian (bokmal)';
+								$lang['nn_NO']='Norwegian (nynorsk)';
+								$lang['ps_AF']='Pashto';
+								$lang['fa_IR']='Persian';
+								$lang['pl_PL']='Polish';
+								$lang['pt_BR']='Portuguese (Brazil)';
+								$lang['pt_PT']='Portuguese (Portugal)';
+								$lang['pa_IN']='Punjabi';
+								$lang['qu_PE']='Quechua';
+								$lang['ro_RO']='Romanian';
+								$lang['rm_CH']='Romansh';
+								$lang['ru_RU']='Russian';
+								$lang['sa_IN']='Sanskrit';
+								$lang['sr_RS']='Serbian';
+								$lang['zh_CN']='Simplified Chinese (China)';
+								$lang['sk_SK']='Slovak';
+								$lang['sl_SI']='Slovenian';
+								$lang['so_SO']='Somali';
+								$lang['es_LA']='Spanish';
+								$lang['es_CL']='Spanish (Chile)';
+								$lang['es_CO']='Spanish (Colombia)';
+								$lang['es_MX']='Spanish (Mexico)';
+								$lang['es_ES']='Spanish (Spain)';
+								$lang['sv_SE']='Swedish';
+								$lang['sy_SY']='Syriac';
+								$lang['tg_TJ']='Tajik';
+								$lang['ta_IN']='Tamil';
+								$lang['tt_RU']='Tatar';
+								$lang['te_IN']='Telugu';
+								$lang['th_TH']='Thai';
+								$lang['zh_HK']='Traditional Chinese (Hong Kong)';
+								$lang['zh_TW']='Traditional Chinese (Taiwan)';
+								$lang['tr_TR']='Turkish';
+								$lang['uk_UA']='Ukrainian';
+								$lang['ur_PK']='Urdu';
+								$lang['uz_UZ']='Uzbek';
+								$lang['vi_VN']='Vietnamese';
+								$lang['cy_GB']='Welsh';
+								$lang['xh_ZA']='Xhosa';
+								$lang['yi_DE']='Yiddish';
+								$lang['zu_ZA']='Zulu';
+							?>
+            
+                <select name="viva_like_use_plugin_lang">
+                 <?php
+                 $curmenutype = get_option('viva_like_use_plugin_lang');
+              foreach($lang as $key=>$val)
+							{
+								$selected='';
+								if($viva_like_settings['language']==$key)
+									$selected="selected";
+									echo '<option value="'.$key.'" '.$selected.' >'.$val.'</option>';
+								
+							}
+								?>
+
+                </select>
+        </tr>
+        
+        
         </table>
        <h3 class="title"><?php _e("Position Settings:", 'viva_like_trans_domain' ); ?></h3>
 	<table class="form-table admintbl">
@@ -570,7 +711,7 @@ function viva_plugin_options()
 
     <?php if (viva_get_wp_version() < 2.7) : ?>
     	<input type="hidden" name="action" value="update" />
-      <input type="hidden" name="page_options" value="viva_like_width, viva_like_height, viva_like_layout, viva_like_verb, viva_like_colorscheme, viva_like_align, viva_like_showfaces, viva_like_show_at_top, viva_like_show_at_bottom, viva_like_show_on_page, viva_like_show_on_post, viva_like_show_on_home, viva_like_facebook_image, viva_like_xfbml, viva_like_xfbml_async, viva_like_use_excerpt_as_description, viva_like_facebook_app_id, viva_like_type , viva_like_excludepage" />
+      <input type="hidden" name="page_options" value="viva_like_width, viva_like_height, viva_like_layout, viva_like_verb, viva_like_use_plugin_lang, viva_like_colorscheme, viva_like_align, viva_like_showfaces, viva_like_show_at_top, viva_like_show_at_bottom, viva_like_show_on_page, viva_like_show_on_post, viva_like_show_on_home, viva_like_facebook_image, viva_like_xfbml, viva_like_xfbml_async, viva_like_use_excerpt_as_description, viva_like_facebook_app_id, viva_like_type , viva_like_excludepage" />
     <?php endif; ?>
    <div class="submitform">
     <input type="submit" name="Submit"  class="button1" value="<?php _e('Save Changes') ?>" />
