@@ -7,7 +7,7 @@
 * Author: Vivacity Infotech Pvt. Ltd.
 * Author URI: http://www.vivacityinfotech.com
 */
- /* Copyright 2014  Vivacity InfoTech Pvt. Ltd.  (email : vivacityinfotech.jaipur@gmail.com)
+ /* Copyright 2014  Vivacity InfoTech Pvt. Ltd.  (email : support@vivacityinfotech.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -785,4 +785,12 @@ has expertise in :
 <?php
 }
 viva_like_init();
+add_filter('plugin_row_meta', 'add_meta_links_wpfblsw',10, 2);
+function add_meta_links_wpfblsw($links, $file) {
+	if ( strpos( $file, 'fb-fan-box-widget.php' ) !== false ) {
+		$links[] = '<a href="http://wordpress.org/support/plugin/wp-fb-share-like-button">Support</a>';
+		$links[] = '<a href="http://bit.ly/1icl56K">Donate</a>';
+	}
+	return $links;
+}
 ?>
