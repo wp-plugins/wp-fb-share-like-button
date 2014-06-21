@@ -10,7 +10,10 @@ License: GPLv2 or later
 == Description ==
 
 A Simple Facebook Like Button for your posts/home/pages/archive.
-Your can like and share your content using a simple click on facebook Button.
+
+Lets people share pages and content from your site back to their Facebook profile with one click, so all their friends can read them.
+
+Now users can select the Locale (Language) in which they want the Facebook Like button to be displayed (Default is 'en_US').
 
 You can also customize setting for following features:
 
@@ -102,4 +105,5 @@ For this please insert page ids separate them with commas,[ like  5, 21] in "Exc
 
 Visit our <a
 href="http://vivacityinfotech.net/wp-facebook-like-button-by-vivacity/">demo page</a> for more information.
+
 
