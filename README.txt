@@ -1,10 +1,10 @@
 === WP Facebook Like Button ===
 Contributors: vivacityinfotech.jaipur
-Donate link: http://tinyurl.com/owxtkmt
+Donate link: http://bit.ly/1icl56K
 Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
 Requires at least:3.5
 Tested up to:3.9.1
-Stable tag: 1.4
+Stable tag: 1.5
 License: GPLv2 or later
 
 == Description ==
@@ -17,7 +17,7 @@ Now users can select the Locale (Language) in which they want the Facebook Like 
 
 You can also customize setting for following features:
 
-
+* Option for select like button language from a bunch of different languages.
 * You can hide /show facebook like button on posts/archive/pages/home.
 * You can show facebook like button at the top and/or botton of content of your posts/home/pages/archive.
 * You can set Facebook Like Button Align to the Left or Right of your posts/home/pages/archive.
@@ -40,7 +40,7 @@ Please take the time to let us and others know about your experiences by leaving
 
 If You Want more functionality or some modifications, just drop us a line what you want and We will try to add or modify the plugin functions.
 
-If you like the plugin please [Donate here](http://tinyurl.com/owxtkmt). 
+If you like the plugin please [Donate here](http://bit.ly/1icl56K). 
 
 == Installation ==
 
@@ -87,9 +87,11 @@ For this please insert page ids separate them with commas,[ like  5, 21] in "Exc
 
 
 == Changelog ==
+= 1.5 =
+* corrected bugs for adding language features with many default themes.
 
 = 1.4 =
-* Added the feature to select from a bunch of different languages.
+* Added the feature to select language from a bunch of different languages.
 
 = 1.3 =
 * Stable version.
