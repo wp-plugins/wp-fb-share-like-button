@@ -258,7 +258,7 @@ function viva_like_widget_footer()
     	   else {
     	 		  $lang1 = $viva_like_settings['language'];
     	   		}
- echo $lang1;
+ //echo $lang1;
   
     if($viva_like_settings['xfbml']=='true') {
 if($viva_like_settings['plugin_app_id'] == 'true') {
