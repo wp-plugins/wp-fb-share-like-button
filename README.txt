@@ -4,7 +4,7 @@ Donate link: http://bit.ly/1icl56K
 Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
 Requires at least:3.5
 Tested up to:3.9.1
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 
 == Description ==
@@ -87,6 +87,9 @@ For this please insert page ids separate them with commas,[ like  5, 21] in "Exc
 
 
 == Changelog ==
+= 1.6 =
+* A bug for displaying language code in bootom of website is resolved.
+
 = 1.5 =
 * corrected bugs for adding language features with many default themes.
 
