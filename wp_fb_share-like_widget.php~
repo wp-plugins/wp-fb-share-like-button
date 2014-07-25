@@ -1,11 +1,11 @@
 <?php
 /**
 * Plugin Name: Wp Facebook Share Like Button
-* Plugin URI: http://www.vivacityinfotech.net
+* Plugin URI: http://www.vivacityinfotech.com
 * Description: A simple Facebook Like Button plugin for your posts/archive/pages or Home page.
-* Version: 1.7
+* Version: 1.6
 * Author: Vivacity Infotech Pvt. Ltd.
-* Author URI: http://www.vivacityinfotech.net
+* Author URI: http://www.vivacityinfotech.com
 */
  /* Copyright 2014  Vivacity InfoTech Pvt. Ltd.  (email : support@vivacityinfotech.com)
 
@@ -27,7 +27,7 @@ $viva_like_settings['default_app_id'] = '';
 $plugin_appid = '305476086278632'; // Plugin's Facebook app Id
 
 
-$viva_like_layouts = array('standard', 'button_count', 'box_count','button');
+$viva_like_layouts = array('standard', 'button_count', 'box_count');
 $viva_like_verbs   = array('like', 'recommend');
 $viva_like_colorschemes = array('light', 'dark');
 $viva_like_aligns   = array('left', 'right');
@@ -35,8 +35,6 @@ $viva_like_types = array(
 	'Activities', 'Activity', 'Company', 'Organizations', 
 	'Author', 'Product','Websites', 'Article', 'Blog', 'Website'
 );
-
-$viva_like_settings['language'] = 'en_Us';
 
 global $pages;
 
@@ -132,7 +130,7 @@ function viva_like_init()
     add_option('viva_like_use_excerpt_as_description', 'true');
     add_option('viva_like_type', 'Article');
     add_option('viva_like_use_plugin_appid', 'true');
-     add_option('viva_like_use_plugin_lang', 'en_Us');
+     add_option('viva_like_use_plugin_lang', 'English');
     
   
     add_option('viva_like_excludepage', $pages);
@@ -141,7 +139,8 @@ function viva_like_init()
     $viva_like_settings['height'] = get_option('viva_like_height');
     $viva_like_settings['layout'] = get_option('viva_like_layout');
     $viva_like_settings['verb'] = get_option('viva_like_verb');
-    $viva_like_settings['language'] = get_option('viva_like_use_plugin_lang');
+     $viva_like_settings['language'] = get_option('viva_like_use_plugin_lang');
+
     $viva_like_settings['colorscheme'] = get_option('viva_like_colorscheme');
     $viva_like_settings['align'] = get_option('viva_like_align');
     $viva_like_settings['showfaces'] = get_option('viva_like_showfaces') === 'true';
@@ -184,19 +183,6 @@ function viva_like_widget_header_meta()
 {
     global $viva_like_settings;
     global $plugin_appid; 
-   
-
-   
-   
-   if($viva_like_settings['language'] == '') {
-       	  $lang1 = 'en_Us';
-      	}
-    	   else {
-    	 		  $lang1 = $viva_like_settings['language'];
-    	   		}
-    echo '<meta property="og:locale" content="'.$lang1.'" />'."\n";
-     echo '<meta property="og:locale:alternate" content="'.$lang1.'" />'."\n";
-   
     
     if($viva_like_settings['plugin_app_id'] == 'true') {
        	  $fbappid = $plugin_appid;
@@ -241,24 +227,22 @@ function viva_like_widget_header_meta()
     else {
     	
     }
-    
+
     foreach($viva_like_settings['og'] as $k => $v) {
 	$v = trim($v);
 	if($v!='')
 	    	echo '<meta property="og:'.$k.'" content="'.htmlspecialchars($v).'" />'."\n";
     }
 }
+
 function viva_like_widget_footer()
 {
     global $viva_like_settings;
    global $plugin_appid; 
-  if($viva_like_settings['language'] == '') {
-       	  $lang1 = 'en_Us';
-      	}
-    	   else {
-    	 		  $lang1 = $viva_like_settings['language'];
-    	   		}
- //echo $lang1;
+   if(isset($viva_like_settings['language'])&& $viva_like_settings['language']!='')
+   	$lang1=$viva_like_settings['language'];
+   else
+   	$lang1='en_US';
   
     if($viva_like_settings['xfbml']=='true') {
 if($viva_like_settings['plugin_app_id'] == 'true') {
@@ -289,7 +273,7 @@ echo <<<END
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/$lang1/all.js#xfbml=1&appId='.$appid.'";
+  js.src = "//connect.facebook.net/".$lang1."/all.js#xfbml=1&appId='.$appid.'";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -369,7 +353,7 @@ function viva_like_widget($content, $sidebar = false)
     if($viva_like_settings['xfbml']=='true') {
 	$button .= '<fb:like href="'.$purl.'" layout="'.$viva_like_settings['layout'].'" show_faces="'.$showfaces.'" width="'.$viva_like_settings['width'].'" action="'.$viva_like_settings['verb'].'" colorscheme="'.$viva_like_settings['colorscheme'].'"></fb:like>';
     } else {
-				$button .= '<iframe src="http://www.facebook.com/plugins/like.php?href='.$url.'" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:'.$viva_like_settings['width'].'px; height: '.$viva_like_settings['height'].'px; align: '.$align.';"></iframe>';
+				$button .= '<iframe src="http://www.facebook.com/plugins/like.php?href='.$url.'" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:'.$viva_like_settings['width'].'px; height: '.$viva_like_settings['height'].'px; align: '.$align.';></iframe>';
    }
 
 
@@ -700,9 +684,10 @@ function viva_plugin_options()
                     $curmenutype = get_option('viva_like_type');
                     foreach ($viva_like_types as $type)
                     {
-		
+			if(strtolower($type) == $type)
 	                        echo "<option value=\"$type\"". ($type == $curmenutype ? " selected":""). ">$type</option>";
-			
+			else
+	                        echo "<option value=\"\">-- $type --</option>";
                     }
                 ?>
                 </select>
@@ -733,7 +718,7 @@ function viva_plugin_options()
    </div>
 
     </form>
-  <p><strong>You can also use [like] shortcode for showing like button on a page.<strong> </p> 
+   
    </div> <!-- --------End of left div--------- -->
  <div class="right">
 	<center>
@@ -808,68 +793,4 @@ function add_meta_links_wpfblsw($links, $file) {
 	}
 	return $links;
 }
-
-
-
-function viva_like_short()
-{
-	
-    global $viva_like_settings;
-    global $appids;
-  
-$content='';
-
-	
-	 $pages = get_option('viva_like_excludepage');
-	 $pages1 = explode(',', $pages);
-	
-	if(!empty($pages)){
-	foreach($pages1 as $page) {
-		if(is_page($page) && $viva_like_settings['showonpage'] ){		
-	 	return 0;
-	 	}
-	 	elseif(is_page() && !$viva_like_settings['showonpage']) {
-	 		return 0;
-	 		}
-	}
-}
-	 $purl = get_permalink();
-
-    $button = "\n<!-- Facebook Like Button Vivacity Infotech BEGIN -->\n";
-
-    $showfaces = ($viva_like_settings['showfaces']=='true')?"true":"false";
-
-    $url = urlencode($purl);
-
-    $separator = '&amp;';
-
-    $url = $url . $separator . 'width='  . $viva_like_settings['width']
-      . $separator . 'layout=' . $viva_like_settings['layout']
-      . $separator . 'action=' . $viva_like_settings['verb']
-		. $separator . 'show_faces=' . $showfaces
-		. $separator . 'height=' . $viva_like_settings['height']
-		. $separator . 'appId=' . $appids
-		. $separator . 'colorscheme=' . $viva_like_settings['colorscheme'] ;
-
- 
-    $align = $viva_like_settings['align']=='right'?'right':'left';
-  
-
-
-    if($viva_like_settings['xfbml']=='true') {
-	$button .= '<fb:like href="'.$purl.'" layout="'.$viva_like_settings['layout'].'" show_faces="'.$showfaces.'" width="'.$viva_like_settings['width'].'" action="'.$viva_like_settings['verb'].'" colorscheme="'.$viva_like_settings['colorscheme'].'"></fb:like>';
-    } else {
-				$button .= '<iframe src="http://www.facebook.com/plugins/like.php?href='.$url.'" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:'.$viva_like_settings['width'].'px; height: '.$viva_like_settings['height'].'px; align: '.$align.';"></iframe>';
-   }
-
-
-    if($align == 'right') {
-	$button = '<div class="like-button" style="float: right; clear: both; text-align: right; width = 100%;">'.$button.'</div>';
-    }
-
-    $button .= "\n<!-- Facebook Like Button Vivacity Infotech END -->\n";
-		
-
-    return $button;
-}
-add_shortcode( 'like', 'viva_like_short' );
+?>
