@@ -23,14 +23,14 @@ You can also customize setting for following features:
 * You can set Facebook Like Button Align to the Left or Right of your posts/home/pages/archive.
 * You can show thumbnail of Facebook profile images.
 * You can customize Width and Height.
-* You can set - Layout (standard, button_count or box_count).
+* You can set - Layout (standard, button_count, box_count or button).
 * You can set - Verb to display (Like or Recommend).
 * You can set - Color Scheme (Light or Dark)
 * Iframe and XFBML versions of Facebook Like Button. 
 * Asynchronous or Synchronous loading of the Javascript
 * Hide facebook Like button using "Exclude Page IDs" from any page if "Show on page" checkbox enabled for all pages.
 * Option for use Facebook App Id provided by plugin.
-
+* You can show facebook like button on a page or post by using a shortcode [like]
 
 = Rate Us / Feedback =
 

@@ -4,7 +4,7 @@ Donate link: http://bit.ly/1icl56K
 Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
 Requires at least:3.5
 Tested up to:3.9.1
-Stable tag: 1.6
+Stable tag: 1.7
 License: GPLv2 or later
 
 == Description ==
@@ -23,14 +23,14 @@ You can also customize setting for following features:
 * You can set Facebook Like Button Align to the Left or Right of your posts/home/pages/archive.
 * You can show thumbnail of Facebook profile images.
 * You can customize Width and Height.
-* You can set - Layout (standard, button_count or box_count).
+* You can set - Layout (standard, button_count, box_count or button).
 * You can set - Verb to display (Like or Recommend).
 * You can set - Color Scheme (Light or Dark)
 * Iframe and XFBML versions of Facebook Like Button. 
 * Asynchronous or Synchronous loading of the Javascript
 * Hide facebook Like button using "Exclude Page IDs" from any page if "Show on page" checkbox enabled for all pages.
 * Option for use Facebook App Id provided by plugin.
-
+* You can show facebook like button on a page or post by using a shortcode [like]
 
 = Rate Us / Feedback =
 
@@ -87,6 +87,11 @@ For this please insert page ids separate them with commas,[ like  5, 21] in "Exc
 
 
 == Changelog ==
+
+= 1.7 =
+* Added a shortcode [like] option for showing like button on a page or post and Added a new layout option (button).
+
+
 = 1.6 =
 * A bug for displaying language code in bootom of website is resolved.
 
