@@ -1,0 +1,213 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Facebook Like Button 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:18+0530\n"
+"PO-Revision-Date: 2014-09-03 16:58+0530\n"
+"Last-Translator: Pranjali Phulwari <support@vivacityinfotech.com>\n"
+"Language-Team: Team Vivacity <support@vivacityinfotech.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: /opt/lampp/htdocs/langtest/wp-content/plugins/\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: wp-fb-share-like-button\n"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:5
+msgid "A simple Facebook Like Button plugin for your posts/archive/pages or Home page."
+msgstr "Једноставан Фацебоок Лике дугме језичка за ваше постове / архива / пагес или кући страници."
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:40
+msgid "Activities"
+msgstr "Активности"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:40
+msgid "Activity"
+msgstr "Активност"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:40
+msgid "Company"
+msgstr "цомпани"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:40
+msgid "Organizations"
+msgstr "Организације"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:41
+msgid "Author"
+msgstr "Аутор"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:41
+msgid "Product"
+msgstr "продуцт"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:41
+msgid "Websites"
+msgstr "вебситес"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:41
+msgid "Article"
+msgstr "Члан"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:41
+msgid "Blog"
+msgstr "блог"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:41
+msgid "Website"
+msgstr "вебсите"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:410
+msgid "Like Plugin Options"
+msgstr "Лике плугин Опције"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:410
+msgid "Like-Settings"
+msgstr "Лике-Сеттингс"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:450
+msgid "Please Insert Your facebook App Id or Use Plugin default App Id."
+msgstr "Молимо унесите Фацебоок Апп ИД или употреба Плугин Дефаулт Апп Ид."
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:465
+msgid "Appearance Settings"
+msgstr "Изглед Подешавања"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:468
+msgid "Width:"
+msgstr "Ширина:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:472
+msgid "Height:"
+msgstr "Висина:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:476
+msgid "Layout:"
+msgstr "Лаиоут:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:489
+msgid "Verb to display:"
+msgstr "Верб на екрану:                 "
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:503
+msgid "Color Scheme:"
+msgstr "Шема боја:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:516
+msgid "Show Faces:"
+msgstr "Схов Фацес:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:520
+msgid "Language:"
+msgstr "лангуаге:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:646
+msgid "Position Settings:"
+msgstr "Позиција подешавања:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:650
+msgid "Align:"
+msgstr "алигн:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:663
+msgid "Show at Top:"
+msgstr "Схов ат Топ:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:667
+msgid "Show at Bottom:"
+msgstr "Схов на дну:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:671
+msgid "Show on Page:"
+msgstr "Прикажи на страници:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:675
+msgid "Show on Post:"
+msgstr "Показати на Пост:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:679
+msgid "Show on Home:"
+msgstr "Показати на Хоме:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:683
+msgid "Show on Archive:"
+msgstr "Показати на Архива:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:688
+msgid "Other Settings:"
+msgstr "Остале поставке:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:692
+msgid "Image URL:"
+msgstr "Имаге УРЛ:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:699
+msgid "Load XFBML Asynchronously:"
+msgstr "Лоад КСФБМЛ асинхроно:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:703
+msgid "Facebook App ID (Required):"
+msgstr "Фацебоок Апп ИД (Обавезно):"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:703
+msgid "To get an App ID:"
+msgstr "Да бисте добили апликацију ИД:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:703
+msgid "Create an  App"
+msgstr "Направи Апп"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:708
+msgid "Use plugin's Facebook App Id"
+msgstr "Фацебоок Апп Ид користе Плугин а"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:708
+msgid "If you want to use facebook app id provided by our plugin please use this checkbox."
+msgstr "Ако желите да користите Фацебоок Апп ИД обезбеђује наш плугин Молимо Вас да користите овај потврду."
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:713
+msgid "Use Excerpt as Description:"
+msgstr "Користите Извод као Опис:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:718
+msgid "Type:"
+msgstr "Тип:"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:738
+msgid "Exclude Using Page/Post IDs"
+msgstr "Искључује Користећи страницу / Пост легитимације"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:739
+msgid "For exclude FB like button, please insert page/post ids separate them with commas, like  5, 21"
+msgstr "За искључује ФБ Лике Буттон, молимо Вас да убаците страна / Пост ИДС их раздвоји са зарезима, као и 5, 21"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:754
+msgid "Save Changes"
+msgstr "Сачувај промене"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:758
+msgid "You can also use"
+msgstr "Такође можете да користите"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:758
+msgid "for showing like button on a page."
+msgstr "за приказивање као дугме на страници."
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:764
+msgid "Download Free Plugins"
+msgstr "Довнлоад Фрее Плугинс"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:768
+msgid "has following plugins for you"
+msgstr "има следеће додатака за вас"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:786
+msgid "Donate Here"
+msgstr "Донате овде"
+
+#: wp-fb-share-like-button/wp_fb_share-like_widget.php:788
+msgid "If you want to donate, please click on below image."
+msgstr "Ако желите да донирате, кликните на слику испод."
+
