@@ -3,8 +3,8 @@ Contributors: vivacityinfotech.jaipur
 Donate link: http://bit.ly/1icl56K
 Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
 Requires at least:3.5
-Tested up to:3.9.1
-Stable tag: 1.7
+Tested up to:3.9.2
+Stable tag: 1.8
 License: GPLv2 or later
 
 == Description ==
@@ -28,9 +28,19 @@ You can also customize setting for following features:
 * You can set - Color Scheme (Light or Dark)
 * Iframe and XFBML versions of Facebook Like Button. 
 * Asynchronous or Synchronous loading of the Javascript
-* Hide facebook Like button using "Exclude Page IDs" from any page if "Show on page" checkbox enabled for all pages.
+* Hide facebook Like button using "Exclude Page/Post IDs" from any page if "Show on page" or "Show on post" checkbox enabled for all pages/posts.
 * Option for use Facebook App Id provided by plugin.
 * You can show facebook like button on a page or post by using a shortcode [like]
+
+= Translators =
+
+* English(US) (en_Us) - [Team Vivacity](http://vivacityinfotech.net/)
+* Serbian (sr_RS) - [Team Vivacity](http://vivacityinfotech.net/)
+
+If you have created your own language pack, or have an update of an existing one, you can send [gettext PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [us](http://vivacityinfotech.net/contact-us/) so that We can bundle it into this plugin.
+You can download the latest [POT file](http://plugins.svn.wordpress.org/wp-fb-share-like-button/trunk/languages/wp-fb-share-like-button.pot), and [PO files in each language](http://plugins.svn.wordpress.org/wp-fb-share-like-button/tags/1.8/languages/).
+
+
 
 = Rate Us / Feedback =
 
@@ -54,7 +64,7 @@ Your Facebook App Id is required to show facebook Like Button on your site.
 If you don't have any facebook app id and so please click on "<a href="https://developers.facebook.com/apps" target="_blank" >Create New App</a>".
 If you don't have any facebook app id so you can also use plugin's default Facebook App Id. For this, optional checkbox provided into settings page.
 
-You can also remove Facebook like button from some pages , if "show on page " checkbox enabled for pages. For remove Facebook like button please insert page ids separate them with commas,[ like 5, 21] in "Exclude Using Page IDs" field.
+You can also remove Facebook like button from some pages/posts , if "show on page" or "Show on post" checkbox enabled for pages/posts. For remove Facebook like button please insert page/post ids separate them with commas,[ like 5, 21] in "Exclude Using Page/Post IDs" field.
 
 After customize plugin settings, please click on "Save Changes".
 
@@ -72,10 +82,9 @@ In WordPress admin panel go to "Settings", find the Like-settings and choose one
 You should click "Save Changes". Make sure that you got the message "Options Saved".
 After saving your settings you should refresh your web page where the Facebook Button icon should be placed.
 
-= How to hide Facebook Button position on any page if checkbox enabled for all pages =
+= How to hide Facebook Button position on any page/post if checkbox enabled for all pages/posts =
 
-You can remove Facebook like button from some pages , if "show on page " checkbox enabled for pages.
-For this please insert page ids separate them with commas,[ like  5, 21] in "Exclude Using Page IDs" field.
+You can remove Facebook like button from some pages/posts , if "show on page" or "Show on post" checkbox enabled for pages/posts. For remove Facebook like button please insert page/post ids separate them with commas,[ like 5, 21] in "Exclude Using Page/Post IDs" field.
 
 
 == Screenshots ==
@@ -88,9 +97,15 @@ For this please insert page ids separate them with commas,[ like  5, 21] in "Exc
 
 == Changelog ==
 
+= 1.8 =
+* feature is added for hiding like button on posts using post ids.
+* Multi languages support.
+* POT file added for translate plugin in your language.
+* Added po/mo files for Serbian (sr_RS) language.
+
+
 = 1.7 =
 * Added a shortcode [like] option for showing like button on a page or post and Added a new layout option (button).
-
 
 = 1.6 =
 * A bug for displaying language code in bootom of website is resolved.

@@ -22,3 +22,17 @@ h3.setup {font-size: 18px;}
 #downloadtbl {text-align: left;}
 #downloadtbl a {font-size: 13px;}
 .errormsg {font-size: 13px;line-height: 30px;}
+
+@media (max-width: 968px) {
+	.right {
+    clear: both;
+    float: none;
+    max-width: 100%;
+    width: 100%;
+} 
+.bottom h3.title { width: 95%; }
+h3.title { width: 95%; }
+.inner_wrap .left {max-width: 100%;
+    width: 100%;}
+	
+	}
