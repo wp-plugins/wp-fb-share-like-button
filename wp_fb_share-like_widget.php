@@ -6,6 +6,7 @@
 * Version: 1.9
 * Author: Vivacity Infotech Pvt. Ltd.
 * Author URI: http://www.vivacityinfotech.net
+* Author Email: support@vivacityinfotech.net
 Text Domain: wp-fb-share-like-button
 Domain Path: /languages/
 */

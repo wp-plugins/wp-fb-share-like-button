@@ -1,10 +1,10 @@
 === WP Facebook Like Button ===
 Contributors: vivacityinfotech.jaipur
 Donate link: http://bit.ly/1icl56K
-Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol
+Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol, html5, iframe, xfbml.
 Requires at least:3.5
-Tested up to:3.9.2
-Stable tag: 1.8
+Tested up to:4.2
+Stable tag: 1.9
 License: GPLv2 or later
 
 == Description ==
@@ -26,11 +26,11 @@ You can also customize setting for following features:
 * You can set - Layout (standard, button_count, box_count or button).
 * You can set - Verb to display (Like or Recommend).
 * You can set - Color Scheme (Light or Dark)
-* Iframe and XFBML versions of Facebook Like Button. 
 * Asynchronous or Synchronous loading of the Javascript
 * Hide facebook Like button using "Exclude Page/Post IDs" from any page if "Show on page" or "Show on post" checkbox enabled for all pages/posts.
 * Option for use Facebook App Id provided by plugin.
 * You can show facebook like button on a page or post by using a shortcode [like]
+* Iframe, HTML5 and XFBML versions of Facebook Like Button. 
 
 = Translators =
 
@@ -86,6 +86,12 @@ After saving your settings you should refresh your web page where the Facebook B
 
 You can remove Facebook like button from some pages/posts , if "show on page" or "Show on post" checkbox enabled for pages/posts. For remove Facebook like button please insert page/post ids separate them with commas,[ like 5, 21] in "Exclude Using Page/Post IDs" field.
 
+= How to change version type of embedding of Facebook like Button =
+In plugin backend we have option("Type of embedding") for change version of like button.
+You can also use below options to override the default setting used for version type in shortcode.
+* btntype => xfbml/html5/iframe
+For Example:
+ [like btntype="iframe"] => For iframe version.
 
 == Screenshots ==
 
@@ -96,6 +102,11 @@ You can remove Facebook like button from some pages/posts , if "show on page" or
 
 
 == Changelog ==
+
+= 1.9 =
+* Updated version type of embedding FB like button using xfbml/iframe/html5.
+* Updated shortcode parameter code for change version type of like button using shortcode.
+* Updated pot/po/mo files for multi language support.
 
 = 1.8 =
 * feature is added for hiding like button on posts using post ids.
