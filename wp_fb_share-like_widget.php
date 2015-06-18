@@ -6,7 +6,6 @@
 * Version: 1.9
 * Author: Vivacity Infotech Pvt. Ltd.
 * Author URI: http://www.vivacityinfotech.net
-* Author Email: support@vivacityinfotech.net
 Text Domain: wp-fb-share-like-button
 Domain Path: /languages/
 */
@@ -775,64 +774,49 @@ function viva_plugin_options()
 <?php _e("For Example:", 'wp-fb-share-like-button' ); ?><br>
  [like btntype="iframe"] => <?php _e("For iframe version.", 'wp-fb-share-like-button' ); ?> </p>
    </div> <!-- --------End of left div--------- -->
- <div class="right">
+  <div class="right">
 	<center>
-	
 <div class="bottom">
-		    <h3 id="download" class="title"><?php _e("Download Free Plugins", 'wp-fb-share-like-button' ); ?></h3>
-     <div id="downloadtbl" class="togglediv">  
+		    <h3 id="download-comments-wvpd" class="title"><?php _e( 'Download Free Plugins', 'wvpd' ); ?></h3>
+		     
+     <div id="downloadtbl-comments-wvpd" class="togglediv">  
 	<h3 class="company">
-<strong>Vivacity InfoTech Pvt. Ltd.</strong>
-<?php _e("has following plugins for you", 'wp-fb-share-like-button' ); ?> :
+<p> Vivacity InfoTech Pvt. Ltd. is an ISO 9001:2008 Certified Company is a Global IT Services company with expertise in outsourced product development and custom software development with focusing on software development, IT consulting, customized development.We have 200+ satisfied clients worldwide.</p>	
+<?php _e( 'Our Top 5 Latest Plugins', 'wvpd' ); ?>:
 </h3>
 <ul class="">
-<li><a target="_blank" href="http://wordpress.org/plugins/wp-twitter-feeds/">WP Twitter Feeds</a></li>
-<li><a target="_blank" href="http://wordpress.org/plugins/facebook-comment-by-vivacity/">Facebook Comments by Vivacity</a></li>
-<li><a target="_blank" href="http://wordpress.org/plugins/wp-facebook-fanbox-widget/">WP Facebook FanBox</a></li>
-<li><a target="_blank" href="http://wordpress.org/plugins/wp-google-analytics-scripts/">WP Google Analytics Scripts</a></li>
-<li><a target="_blank" href="http://wordpress.org/plugins/wp-xml-sitemap/">WP XML Sitemap</a></li>
-<li><a target="_blank" href="http://wordpress.org/plugins/wp-facebook-auto-publish/">WP Facebook Auto Publish</a></li>
-<li><a target="_blank" href="http://wordpress.org/plugins/wp-twitter-autopost/">WP Twitter Autopost</a></li>
-<li><a target="_blank" href="http://wordpress.org/plugins/wp-responsive-jquery-slider/">WP Responsive Jquery Slider</a></li>
-<li><a target="_blank" href="http://wordpress.org/plugins/wp-google-plus-one-button/">WP Google Plus One Button</a></li>
-<li><a target="_blank" href="http://wordpress.org/plugins/wp-qr-code-generator/">WP QR Code Generator</a></li>
-
+<li><a target="_blank" href="https://wordpress.org/plugins/woocommerce-social-buttons/">Woocommerce Social Buttons</a></li>
+<li><a target="_blank" href="https://wordpress.org/plugins/vi-random-posts-widget/">Vi Random Post Widget</a></li>
+<li><a target="_blank" href="http://wordpress.org/plugins/wp-infinite-scroll-posts/">WP EasyScroll Posts</a></li>
+<li><a target="_blank" href="https://wordpress.org/plugins/buddypress-social-icons/">BuddyPress Social Icons</a></li>
+<li><a target="_blank" href="http://wordpress.org/plugins/wp-fb-share-like-button/">WP Facebook Like Button</a></li>
 </ul>
   </div> 
 </div>		
 <div class="bottom">
-		    <h3 id="donatehere" class="title"><?php _e("Donate Here", 'wp-fb-share-like-button' ); ?></h3>
-     <div id="donateheretbl" class="togglediv">  
-     <p><?php _e("If you want to donate, please click on below image.", 'wp-fb-share-like-button' ); ?></p>
-	<a href="http://tinyurl.com/owxtkmt" target="_blank"><img class="donate" src="<?php echo plugins_url( 'assets/paypal.gif' , __FILE__ ); ?>" width="150" height="50" title="Donate here"></a>		
+		    <h3 id="donatehere-comments-wvpd" class="title"><?php _e( 'Donate Here', 'wvpd' ); ?></h3>
+     <div id="donateheretbl-comments-wvpd" class="togglediv">  
+     <p><?php _e( 'If you want to donate , please click on below image.', 'wvpd' ); ?></p>
+	<a href="http://bit.ly/1icl56K" target="_blank"><img class="donate" src="<?php echo plugins_url( 'assets/paypal.gif' , __FILE__ ); ?>" width="150" height="50" title="<?php _e( 'Donate Here', 'wvpd' ); ?>"></a>		
   </div> 
 </div>	
 <div class="bottom">
- <h3 id="aboutauthor" class="title">About The Author</h3>
-     <div id="aboutauthortbl" class="togglediv">  
-	<p> <strong>Vivacity InfoTech Pvt. Ltd. , an ISO 9001:2008 Certified Company,</strong>is a Global IT Services company with expertise in outsourced product development and custom software development with focusing on software development, IT consulting, customized development.We have 200+ satisfied clients worldwide.</p>	
-<h3 class="company">
-<strong>Vivacity InfoTech Pvt. Ltd.</strong>
-has expertise in :
-</h3>
-<ul class="">
-<li>Outsourced Product Development</li>
-<li>Customized Solutions</li>
-<li>Web and E-Commerce solutions</li>
-<li>Multimedia and Designing</li>
-<li>ISV Solutions</li>
-<li>Consulting Services</li>
-<li>
-<a target="_blank" href="http://www.lemonpix.com/">
-<span class="colortext">Web Hosting</span>
-</a>
-</li>
-</ul>
- <h3><strong><a target="_blank" href="http://vivacityinfotech.net/contact-us/" >Contact Us Here</a></strong></h3>
+		    <h3 id="donatehere-comments-wvpd" class="title"><?php _e( 'Woocommerce Frontend Plugin', 'wvpd' ); ?></h3>
+     <div id="donateheretbl-comments-wvpd" class="togglediv">  
+     <p><?php _e( 'If you want to purchase , please click on below image.', 'wvpd' ); ?></p>
+	<a href="http://bit.ly/1HZGRBg" target="_blank"><img class="donate" src="<?php echo plugins_url( 'assets/woo_frontend_banner.png' , __FILE__ ); ?>" width="336" height="280" title="<?php _e( 'Donate Here', 'wvpd' ); ?>"></a>		
   </div> 
-</div>	
+</div>
+<div class="bottom">
+		    <h3 id="donatehere-comments-wvpd" class="title"><?php _e( 'Blue Frog Template', 'wvpd' ); ?></h3>
+     <div id="donateheretbl-comments-wvpd" class="togglediv">  
+     <p><?php _e( 'If you want to purchase , please click on below image.', 'wvpd' ); ?></p>
+	<a href="http://bit.ly/1Gwp4Vv" target="_blank"><img class="donate" src="<?php echo plugins_url( 'assets/blue_frog_banner.png' , __FILE__ ); ?>" width="336" height="280" title="<?php _e( 'Donate Here', 'wvpd' ); ?>"></a>		
+  </div> 
+</div>
 	</center>
- </div><!-- --------End of right div--------- -->
+</div>
+ <!-- --------End of right div--------- -->
 </div> <!-- --------End of inner_wrap--------- -->
 		
 		
