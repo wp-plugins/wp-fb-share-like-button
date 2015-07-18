@@ -16,7 +16,7 @@ h3.setup {font-size: 18px;}
 .button1:hover {background:#555555;}
 .togglediv {margin-bottom: 20px;}
 #aboutauthortbl {text-align:justify;}
-.company {font-size: 14px;font-weight: normal;margin-top: 0px;}
+.company {font-size: 14px;font-weight: normal;margin-top: 0px; text-align: left;}
 #aboutauthortbl p {margin-top: 0px;}
 #donateheretbl p {text-align: left;margin-top: 0px;}
 #downloadtbl {text-align: left;}
