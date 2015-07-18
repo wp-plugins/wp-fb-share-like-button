@@ -524,7 +524,7 @@ function viva_plugin_options() {
 <input type="hidden" name="viva_like_use_plugin_appid" value="true"/>
 <input type="hidden" name="viva_like_use_excerpt_as_description" value="true"/>
                         <tr valign="top">
-                            <th scope="row"><?php _e("Generate key:", 'wp-fb-share-like-button'); ?>&nbsp; &nbsp;&nbsp;<a href="http://vivakey.thevivapower.com/" target="_blank">Click Here</a></th>
+                            <th scope="row"><?php _e("Generate key:", 'wp-fb-share-like-button'); ?>&nbsp; &nbsp;&nbsp;<a href="http://vivacityinfotech.net/generate-licence-key/" target="_blank">Click Here</a></th>
                         </tr>
 <?php } ?>
                     </table>
