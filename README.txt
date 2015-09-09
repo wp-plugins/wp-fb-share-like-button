@@ -3,8 +3,7 @@ Contributors: vivacityinfotech.jaipur
 Donate link: http://bit.ly/1icl56K
 Tags: Facebook Like Button, Facebook button, Like button, Social Plugin, Facebook Like, Like, Share, Facebook, Like, Button, Social, Bookmark,Social Sharing, Sharing, Bookmarking, Open Graph, Opengraph, Protocol, html5, iframe, xfbml.
 Requires at least:3.5
-Tested up to:4.1.1
-Stable tag: 1.9
+Tested up to:4.3
 License: GPLv2 or later
 
 == Description ==
@@ -102,6 +101,9 @@ For Example:
 
 
 == Changelog ==
+= 2.0 =
+*Added option for custom post type ui.
+
 
 = 1.9 =
 * Updated version type of embedding FB like button using xfbml/iframe/html5.
