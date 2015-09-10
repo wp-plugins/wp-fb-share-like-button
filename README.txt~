@@ -103,6 +103,7 @@ For Example:
 == Changelog ==
 = 2.0 =
 *Added option for custom post type ui.
+*Compatible with Wordpress Latest Version 4.3.
 
 
 = 1.9 =
