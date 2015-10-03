@@ -7,7 +7,7 @@
  * Author: Vivacity Infotech Pvt. Ltd.
  * Author URI: http://www.vivacityinfotech.net
   Text Domain: wp-fb-share-like-button
-  Domain Path: /languages/
+  Domain Path: /languages
  */
 /* Copyright 2014  Vivacity InfoTech Pvt. Ltd.  (email : support@vivacityinfotech.net)
 
@@ -489,7 +489,7 @@ function viva_plugin_options() {
     <div class="wrap">
 
         <div class="top">
-            <h3>Facebook Like Button <small>by <a href="http://www.vivacityinfotech.net" target="_blank">Vivacity Infotech Pvt. Ltd.</a>
+            <h3><?php _e( 'Facebook Like Button', 'my-plugin' );?> <small>by <a href="http://www.vivacityinfotech.net" target="_blank"><?php _e( 'Vivacity Infotech Pvt. Ltd.', 'my-plugin' );?></a>
             </h3>
         </div> <!-- ------End of top-----------  -->
 
@@ -524,7 +524,7 @@ function viva_plugin_options() {
 <input type="hidden" name="viva_like_use_plugin_appid" value="true"/>
 <input type="hidden" name="viva_like_use_excerpt_as_description" value="true"/>
                         <tr valign="top">
-                            <th scope="row"><?php _e("Generate key:", 'wp-fb-share-like-button'); ?>&nbsp; &nbsp;&nbsp;<a href="http://vivacityinfotech.net/generate-licence-key/" target="_blank">Click Here</a></th>
+                            <th scope="row"><?php _e("Generate key:", 'wp-fb-share-like-button'); ?>&nbsp; &nbsp;&nbsp;<a href="http://vivacityinfotech.net/generate-licence-key/" target="_blank"><?php _e("Click Here", 'wp-fb-share-like-button'); ?></a></th>
                         </tr>
 <?php } ?>
                     </table>
@@ -767,9 +767,9 @@ function viva_plugin_options() {
 
                             <tr valign="top">
                                 <th scope="row"><?php _e("Type of embedding:", 'wp-fb-share-like-button'); ?></th>
-                                <td><span class="viva_like_btntype"><input type="radio" name="viva_like_btntype" value="xfbml" <?php echo (get_option('viva_like_btntype') == 'xfbml' ? 'checked' : ''); ?> />XFBML</span>
-                                    <span class="viva_like_btntype"><input type="radio" name="viva_like_btntype" value="iframe" <?php echo (get_option('viva_like_btntype') == 'iframe' ? 'checked' : ''); ?> />IFRAME</span>
-                                    <span class="viva_like_btntype"><input type="radio" name="viva_like_btntype" value="html5" <?php echo (get_option('viva_like_btntype') == 'html5' ? 'checked' : ''); ?> />HTML5</span>
+                                <td><span class="viva_like_btntype"><input type="radio" name="viva_like_btntype" value="xfbml" <?php echo (get_option('viva_like_btntype') == 'xfbml' ? 'checked' : ''); ?> /><?php _e("XFBML", 'wp-fb-share-like-button'); ?></span>
+                                    <span class="viva_like_btntype"><input type="radio" name="viva_like_btntype" value="iframe" <?php echo (get_option('viva_like_btntype') == 'iframe' ? 'checked' : ''); ?> /><?php _e("IFRAME", 'wp-fb-share-like-button'); ?></span>
+                                    <span class="viva_like_btntype"><input type="radio" name="viva_like_btntype" value="html5" <?php echo (get_option('viva_like_btntype') == 'html5' ? 'checked' : ''); ?> /><?php _e("HTML5", 'wp-fb-share-like-button'); ?></span>
                                 </td>
                             </tr>
 
@@ -847,41 +847,41 @@ function viva_plugin_options() {
                             <div class="right">
                                 <center>
                                     <div class="bottom">
-                                        <h3 id="download-comments-wvpd" class="title"><?php _e('Download Free Plugins', 'wvpd'); ?></h3>
+                                        <h3 id="download-comments-wvpd" class="title"><?php _e('Download Free Plugins', 'wp-fb-share-like-button'); ?></h3>
 
                                         <div id="downloadtbl-comments-wvpd" class="togglediv">  
                                             <h3 class="company">
-                                                <p> Vivacity InfoTech Pvt. Ltd. is an ISO 9001:2008 Certified Company is a Global IT Services company with expertise in outsourced product development and custom software development with focusing on software development, IT consulting, customized development.We have 200+ satisfied clients worldwide.</p>	
+                                                <p><?php _e('Vivacity InfoTech Pvt. Ltd. is an ISO 9001:2008 Certified Company is a Global IT Services company with expertise in outsourced product development and custom software development with focusing on software development, IT consulting, customized development.We have 200+ satisfied clients worldwide.', 'wp-fb-share-like-button') ?> </p>	
                                                 <?php _e('Our Top 5 Latest Plugins', 'wvpd'); ?>:
                                             </h3>
                                             <ul class="">
-                                                <li><a target="_blank" href="https://wordpress.org/plugins/woocommerce-social-buttons/">Woocommerce Social Buttons</a></li>
-                                                <li><a target="_blank" href="https://wordpress.org/plugins/vi-random-posts-widget/">Vi Random Post Widget</a></li>
-                                                <li><a target="_blank" href="http://wordpress.org/plugins/wp-infinite-scroll-posts/">WP EasyScroll Posts</a></li>
-                                                <li><a target="_blank" href="https://wordpress.org/plugins/buddypress-social-icons/">BuddyPress Social Icons</a></li>
-                                                <li><a target="_blank" href="http://wordpress.org/plugins/wp-fb-share-like-button/">WP Facebook Like Button</a></li>
+                                                <li><a target="_blank" href="https://wordpress.org/plugins/woocommerce-social-buttons/"><?php _e("Woocommerce Social Buttons", 'wp-fb-share-like-button'); ?></a></li>
+                                                <li><a target="_blank" href="https://wordpress.org/plugins/vi-random-posts-widget/"><?php _e("Vi Random Post Widget", 'wp-fb-share-like-button'); ?></a></li>
+                                                <li><a target="_blank" href="http://wordpress.org/plugins/wp-infinite-scroll-posts/"></a><?php _e("WP EasyScroll Posts", 'wp-fb-share-like-button'); ?></li>
+                                                <li><a target="_blank" href="https://wordpress.org/plugins/buddypress-social-icons/"><?php _e("BuddyPress Social Icons", 'wp-fb-share-like-button'); ?></a></li>
+                                                <li><a target="_blank" href="http://wordpress.org/plugins/wp-fb-share-like-button/"><?php _e("WP Facebook Like Button", 'wp-fb-share-like-button'); ?></a></li>
                                             </ul>
                                         </div> 
                                     </div>		
                                     <div class="bottom">
-                                        <h3 id="donatehere-comments-wvpd" class="title"><?php _e('Donate Here', 'wvpd'); ?></h3>
+                                        <h3 id="donatehere-comments-wvpd" class="title"><?php _e('Donate Here', 'wp-fb-share-like-button'); ?></h3>
                                         <div id="donateheretbl-comments-wvpd" class="togglediv">  
-                                            <p><?php _e('If you want to donate , please click on below image.', 'wvpd'); ?></p>
-                                            <a href="http://bit.ly/1icl56K" target="_blank"><img class="donate" src="<?php echo plugins_url('assets/paypal.gif', __FILE__); ?>" width="150" height="50" title="<?php _e('Donate Here', 'wvpd'); ?>"></a>		
+                                            <p><?php _e('If you want to donate , please click on below image.', 'wp-fb-share-like-button'); ?></p>
+                                            <a href="http://bit.ly/1icl56K" target="_blank"><img class="donate" src="<?php echo plugins_url('assets/paypal.gif', __FILE__); ?>" width="150" height="50" title="<?php _e('Donate Here', 'wp-fb-share-like-button'); ?>"></a>		
                                         </div> 
                                     </div>	
                                     <div class="bottom">
-                                        <h3 id="donatehere-comments-wvpd" class="title"><?php _e('Woocommerce Frontend Plugin', 'wvpd'); ?></h3>
+                                        <h3 id="donatehere-comments-wvpd" class="title"><?php _e('Woocommerce Frontend Plugin', 'wp-fb-share-like-button'); ?></h3>
                                         <div id="donateheretbl-comments-wvpd" class="togglediv">  
-                                            <p><?php _e('If you want to purchase , please click on below image.', 'wvpd'); ?></p>
-                                            <a href="http://bit.ly/1HZGRBg" target="_blank"><img class="donate" src="<?php echo plugins_url('assets/woo_frontend_banner.png', __FILE__); ?>" width="336" height="280" title="<?php _e('Donate Here', 'wvpd'); ?>"></a>		
+                                            <p><?php _e('If you want to purchase , please click on below image.', 'wp-fb-share-like-button'); ?></p>
+                                            <a href="http://bit.ly/1HZGRBg" target="_blank"><img class="donate" src="<?php echo plugins_url('assets/woo_frontend_banner.png', __FILE__); ?>" width="336" height="280" title="<?php _e('Donate Here', 'wp-fb-share-like-button'); ?>"></a>		
                                         </div> 
                                     </div>
                                     <div class="bottom">
-                                        <h3 id="donatehere-comments-wvpd" class="title"><?php _e('Blue Frog Template', 'wvpd'); ?></h3>
+                                        <h3 id="donatehere-comments-wvpd" class="title"><?php _e('Blue Frog Template', 'wp-fb-share-like-button'); ?></h3>
                                         <div id="donateheretbl-comments-wvpd" class="togglediv">  
-                                            <p><?php _e('If you want to purchase , please click on below image.', 'wvpd'); ?></p>
-                                            <a href="http://bit.ly/1Gwp4Vv" target="_blank"><img class="donate" src="<?php echo plugins_url('assets/blue_frog_banner.png', __FILE__); ?>" width="336" height="280" title="<?php _e('Donate Here', 'wvpd'); 
+                                            <p><?php _e('If you want to purchase , please click on below image.', 'wp-fb-share-like-button'); ?></p>
+                                            <a href="http://bit.ly/1Gwp4Vv" target="_blank"><img class="donate" src="<?php echo plugins_url('assets/blue_frog_banner.png', __FILE__); ?>" width="336" height="280" title="<?php _e('Donate Here', 'wp-fb-share-like-button'); 
 
 
 
